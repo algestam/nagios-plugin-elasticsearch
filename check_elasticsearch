@@ -615,7 +615,6 @@ def get_json(uri):
 def version(version_string):
     """Accept a typical version string (ex: 1.0.1 or 5.0.0-alpha1) and return a
     tuple of ints, allowing for reasonable comparison."""
-    #return tuple([int(i) for i in re.findall(r'\d+', version_string)])
     return tuple([int(re.findall(r'^\d+', i)[0]) for i in version_string.split('.')])
 
 
